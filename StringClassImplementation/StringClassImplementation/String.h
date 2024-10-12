@@ -29,8 +29,17 @@ public:
 
 	~String();
 
+	//member functions
+	String& append(const String& str);
+	String& append(const String& str, size_t subpos, size_t sublen);
+	String& append(const char* s, size_t n);
+	String& append(const char* s);
+	String& append(size_t n, char c);
+
+	//non-member overloads
 	friend ostream& operator<<(ostream& out, const String& str);
 
+	//member constants
 	static const size_t npos = -1;
 };
 
